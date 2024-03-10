@@ -29,6 +29,7 @@ import ecommerce from "@/images/ecommerce.jpg";
 import fileconverter from "@/images/file-converter.jpg";
 import socialapp from "@/images/social-app.jpg";
 import whxref from "@/images/whxref.jpg";
+import { Technology } from "@/types/types.d";
 
 export const PROJECTS: ProjectCardProps[] = [
 	{
@@ -39,6 +40,14 @@ export const PROJECTS: ProjectCardProps[] = [
 		imageAlt: "screenshot of ecommerce site",
 		githubLink: "https://github.com/whoyoux/ecommerce",
 		projectLink: "https://ecommerce-whx.vercel.app/",
+		technologyStack: [
+			Technology.TS,
+			Technology.NextJS,
+			Technology.PrismaORM,
+			Technology.TailwindCSS,
+			Technology.Stripe,
+			Technology.Postgres,
+		],
 	},
 	{
 		title: "social app",
@@ -48,6 +57,13 @@ export const PROJECTS: ProjectCardProps[] = [
 		imageAlt: "screenshot of social app",
 		githubLink: "https://github.com/whoyoux/social-app",
 		projectLink: "https://social-app-whx.vercel.app",
+		technologyStack: [
+			Technology.TS,
+			Technology.NextJS,
+			Technology.DrizzleORM,
+			Technology.TailwindCSS,
+			Technology.Postgres,
+		],
 	},
 	{
 		title: "url shortener",
@@ -57,6 +73,14 @@ export const PROJECTS: ProjectCardProps[] = [
 		imageAlt: "screenshot of whxref.pl",
 		githubLink: "https://github.com/whoyoux/url-shortener",
 		projectLink: "https://www.whxref.pl",
+		technologyStack: [
+			Technology.TS,
+			Technology.NextJS,
+			Technology.TailwindCSS,
+			Technology.Stripe,
+			Technology.PrismaORM,
+			Technology.Postgres,
+		],
 	},
 	{
 		title: "file converter",
@@ -66,5 +90,11 @@ export const PROJECTS: ProjectCardProps[] = [
 		imageAlt: "screenshot of fileconverter",
 		githubLink: "https://github.com/whoyoux/file-converter",
 		projectLink: "https://file-converter-whx.vercel.app",
+		technologyStack: [
+			Technology.TS,
+			Technology.NextJS,
+			Technology.TailwindCSS,
+			Technology.FFmpeg,
+		],
 	},
 ];

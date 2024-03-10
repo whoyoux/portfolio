@@ -12,7 +12,9 @@ import Image, { StaticImageData } from "next/image";
 
 import { PROJECTS } from "@/config/site-config";
 import { cn } from "@/lib/utils";
+import { Technology } from "@/types/types";
 import Link from "next/link";
+import TechnologyStack from "./technology-stack";
 
 const Projects = () => {
 	return (
@@ -35,6 +37,7 @@ export type ProjectCardProps = {
 	description: string;
 	image: StaticImageData;
 	imageAlt: string;
+	technologyStack: Technology[];
 	githubLink: string;
 	projectLink?: string;
 };
@@ -43,6 +46,7 @@ const ProjectCard = ({
 	title,
 	slug,
 	description,
+	technologyStack,
 	image,
 	imageAlt,
 	githubLink,
@@ -54,9 +58,10 @@ const ProjectCard = ({
 				<Link href={slug} className="hover:underline">
 					<CardTitle>{title}</CardTitle>
 				</Link>
-				<CardDescription>{description}</CardDescription>
+				{/* <CardDescription>{description}</CardDescription> */}
 			</CardHeader>
-			<CardContent>
+			<CardContent className="flex flex-col gap-4">
+				<TechnologyStack stack={technologyStack} />
 				<Image src={image} alt={imageAlt} className="rounded-md border" />
 			</CardContent>
 			<CardFooter className="flex justify-end gap-2">
