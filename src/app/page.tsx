@@ -1,5 +1,11 @@
-import Image from "next/image";
+import Hero from "@/components/hero";
+import Projects from "@/components/projects";
 
 export default function Home() {
-	return <main>xd</main>;
+	return (
+		<main>
+			<Hero />
+			<Projects />
+		</main>
+	);
 }

@@ -1,0 +1,86 @@
+import { Button, buttonVariants } from "@/components/ui/button";
+import {
+	Card,
+	CardContent,
+	CardDescription,
+	CardFooter,
+	CardHeader,
+	CardTitle,
+} from "@/components/ui/card";
+import { Github, Link as LinkImage } from "lucide-react";
+import Image, { StaticImageData } from "next/image";
+
+import ecommerce from "@/images/ecommerce.png";
+import { cn } from "@/lib/utils";
+import Link from "next/link";
+
+const Projects = () => {
+	return (
+		<section>
+			<h2 className="scroll-m-20 text-3xl font-semibold tracking-tight">
+				My projects
+			</h2>
+			<ul className="w-full grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+				<ProjectCard
+					title="Project 1"
+					slug="/project-1"
+					description="technologies here"
+					image={ecommerce}
+					imageAlt="ecommerce image"
+					githubLink="/"
+					projectLink="/"
+				/>
+			</ul>
+		</section>
+	);
+};
+
+type ProjectCardProps = {
+	title: string;
+	slug: string;
+	description: string;
+	image: StaticImageData;
+	imageAlt: string;
+	githubLink: string;
+	projectLink?: string;
+};
+
+const ProjectCard = ({
+	title,
+	slug,
+	description,
+	image,
+	imageAlt,
+	githubLink,
+	projectLink,
+}: ProjectCardProps) => {
+	return (
+		<Card>
+			<CardHeader>
+				<Link href={slug} className="hover:underline">
+					<CardTitle>{title}</CardTitle>
+				</Link>
+				<CardDescription>{description}</CardDescription>
+			</CardHeader>
+			<CardContent>
+				<Image src={image} alt={imageAlt} className="rounded-md" />
+			</CardContent>
+			<CardFooter className="flex justify-end gap-2">
+				<Link
+					href={githubLink}
+					className={cn(buttonVariants({ variant: "secondary", size: "icon" }))}
+				>
+					<Github />
+				</Link>
+				<Link
+					href={projectLink ?? "/"}
+					className={cn(buttonVariants({ variant: "secondary", size: "icon" }))}
+				>
+					<LinkImage />
+				</Link>
+			</CardFooter>
+		</Card>
+	);
+};
+
+export default Projects;

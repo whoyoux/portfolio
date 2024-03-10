@@ -1,3 +1,5 @@
+import Header from "@/components/header";
+import { ThemeProvider } from "@/components/theme-provider";
 import { siteConfig } from "@/config/site-config";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
@@ -16,14 +18,24 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang="en">
+		<html lang="en" suppressHydrationWarning>
 			<body
 				className={cn(
 					"min-h-screen bg-background font-sans antialiased",
 					fontSans.variable,
 				)}
 			>
-				{children}
+				<ThemeProvider
+					attribute="class"
+					defaultTheme="system"
+					enableSystem
+					disableTransitionOnChange
+				>
+					<div className="max-w-screen-lg mx-auto px-2">
+						<Header />
+						{children}
+					</div>
+				</ThemeProvider>
 			</body>
 		</html>
 	);
