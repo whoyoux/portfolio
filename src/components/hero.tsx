@@ -1,4 +1,6 @@
-import { Button } from "./ui/button";
+import { buttonVariants } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+import Link from "next/link";
 
 const Hero = () => {
 	return (
@@ -15,7 +17,12 @@ const Hero = () => {
 			</p>
 			<p>currently looking for a job 🙌</p>
 			<div>
-				<Button className="font-semibold">contact</Button>
+				<Link
+					href="mailto:teczakm@gmail.com"
+					className={cn(buttonVariants({}), "font-semilbold")}
+				>
+					contact
+				</Link>
 			</div>
 		</section>
 	);
