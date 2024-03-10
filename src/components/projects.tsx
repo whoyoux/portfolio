@@ -63,12 +63,16 @@ const ProjectCard = ({
 				<Link
 					href={githubLink}
 					className={cn(buttonVariants({ variant: "secondary", size: "icon" }))}
+					target="_blank"
+					referrerPolicy="no-referrer"
 				>
 					<Github />
 				</Link>
 				<Link
 					href={projectLink ?? "/"}
 					className={cn(buttonVariants({ variant: "secondary", size: "icon" }))}
+					target="_blank"
+					referrerPolicy="no-referrer"
 				>
 					<LinkImage />
 				</Link>
