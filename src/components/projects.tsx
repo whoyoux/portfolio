@@ -10,32 +10,26 @@ import {
 import { Github, Link as LinkImage } from "lucide-react";
 import Image, { StaticImageData } from "next/image";
 
-import ecommerce from "@/images/ecommerce.png";
+import { PROJECTS } from "@/config/site-config";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 
 const Projects = () => {
 	return (
-		<section>
+		<section id="projects">
 			<h2 className="scroll-m-20 text-3xl font-semibold tracking-tight">
 				My projects
 			</h2>
 			<ul className="w-full grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-				<ProjectCard
-					title="Project 1"
-					slug="/project-1"
-					description="technologies here"
-					image={ecommerce}
-					imageAlt="ecommerce image"
-					githubLink="/"
-					projectLink="/"
-				/>
+				{PROJECTS.map((project) => (
+					<ProjectCard key={project.title} {...project} />
+				))}
 			</ul>
 		</section>
 	);
 };
 
-type ProjectCardProps = {
+export type ProjectCardProps = {
 	title: string;
 	slug: string;
 	description: string;
@@ -63,7 +57,7 @@ const ProjectCard = ({
 				<CardDescription>{description}</CardDescription>
 			</CardHeader>
 			<CardContent>
-				<Image src={image} alt={imageAlt} className="rounded-md" />
+				<Image src={image} alt={imageAlt} className="rounded-md border" />
 			</CardContent>
 			<CardFooter className="flex justify-end gap-2">
 				<Link

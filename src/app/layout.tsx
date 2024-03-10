@@ -1,3 +1,4 @@
+import Footer from "@/components/footer";
 import Header from "@/components/header";
 import { ThemeProvider } from "@/components/theme-provider";
 import { siteConfig } from "@/config/site-config";
@@ -34,6 +35,7 @@ export default function RootLayout({
 					<div className="max-w-screen-lg mx-auto px-2">
 						<Header />
 						{children}
+						<Footer />
 					</div>
 				</ThemeProvider>
 			</body>

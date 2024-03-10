@@ -1,12 +1,13 @@
 import { ThemeToggle } from "@/components/theme-toggle";
-import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const Header = () => {
 	return (
 		<header className="w-full border-b py-4 flex items-center justify-between">
-			<h1 className="font-semibold">whx</h1>
+			<Link href="/">
+				<h1 className="font-semibold hover:underline">whx</h1>
+			</Link>
 			<div className="flex items-center gap-2">
-				<Button variant={"link"}>about</Button>
 				<ThemeToggle />
 			</div>
 		</header>
