@@ -11,6 +11,26 @@ const fontSans = FontSans({ subsets: ["latin"], variable: "--font-sans" });
 
 export const metadata: Metadata = {
 	...siteConfig,
+	openGraph: {
+		type: "website",
+		title: siteConfig.title,
+		description: siteConfig.description,
+		url: siteConfig.url,
+		siteName: siteConfig.title,
+		images: [
+			{
+				url: "https://portfolio-whx.vercel.app/ogimage.jpg",
+			},
+		],
+	},
+	twitter: {
+		card: "summary_large_image",
+		creator: "@whoyoux1",
+		images: "https://portfolio-whx.vercel.app/ogimage.jpg",
+		title: siteConfig.title,
+		description: siteConfig.description,
+		site: siteConfig.url,
+	},
 };
 
 export default function RootLayout({
