@@ -1,8 +1,8 @@
 import { ProjectCardProps } from "@/components/projects";
 
 export const siteConfig = {
-	title: "whoyoux's Portfolio",
-	description: "nextjs helping under the hood",
+	title: "whx",
+	description: "whoyoux's portfolio",
 	keywords: [
 		"portfolio",
 		"nextjs portfolio",
@@ -15,7 +15,7 @@ export const siteConfig = {
 	url:
 		process.env.NODE_ENV === "development"
 			? "http://localhost:3000"
-			: "https://portfolio-whx.vercel.app",
+			: "https://whx.world",
 	authors: [
 		{
 			name: "whoyoux",
@@ -37,8 +37,8 @@ export const PROJECTS: ProjectCardProps[] = [
 		description: "technologies here",
 		image: ecommerce,
 		imageAlt: "screenshot of ecommerce site",
-		githubLink: "/",
-		projectLink: "/",
+		githubLink: "https://github.com/whoyoux/ecommerce",
+		projectLink: "https://ecommerce-whx.vercel.app/",
 	},
 	{
 		title: "social app",
@@ -46,8 +46,8 @@ export const PROJECTS: ProjectCardProps[] = [
 		description: "technologies here",
 		image: socialapp,
 		imageAlt: "screenshot of social app",
-		githubLink: "/",
-		projectLink: "/",
+		githubLink: "https://github.com/whoyoux/social-app",
+		projectLink: "https://social-app-whx.vercel.app",
 	},
 	{
 		title: "url shortener",
@@ -55,8 +55,8 @@ export const PROJECTS: ProjectCardProps[] = [
 		description: "technologies here",
 		image: whxref,
 		imageAlt: "screenshot of whxref.pl",
-		githubLink: "/",
-		projectLink: "/",
+		githubLink: "https://github.com/whoyoux/url-shortener",
+		projectLink: "https://www.whxref.pl",
 	},
 	{
 		title: "file converter",
@@ -64,7 +64,7 @@ export const PROJECTS: ProjectCardProps[] = [
 		description: "technologies here",
 		image: fileconverter,
 		imageAlt: "screenshot of fileconverter",
-		githubLink: "/",
-		projectLink: "/",
+		githubLink: "https://github.com/whoyoux/file-converter",
+		projectLink: "https://file-converter-whx.vercel.app",
 	},
 ];
