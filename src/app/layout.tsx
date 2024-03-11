@@ -10,7 +10,15 @@ import "./globals.css";
 const fontSans = FontSans({ subsets: ["latin"], variable: "--font-sans" });
 
 export const metadata: Metadata = {
-	...siteConfig,
+	metadataBase: new URL(siteConfig.url),
+	title: {
+		default: siteConfig.title,
+		template: `%s - ${siteConfig.title}`,
+	},
+	description: siteConfig.description,
+	keywords: siteConfig.keywords,
+	authors: siteConfig.authors,
+	creator: siteConfig.creator,
 	openGraph: {
 		type: "website",
 		title: siteConfig.title,
@@ -19,14 +27,14 @@ export const metadata: Metadata = {
 		siteName: siteConfig.title,
 		images: [
 			{
-				url: "https://portfolio-whx.vercel.app/ogimage.jpg",
+				url: "https://whx.world/ogimage.jpg",
 			},
 		],
 	},
 	twitter: {
 		card: "summary_large_image",
 		creator: "@whoyoux1",
-		images: "https://portfolio-whx.vercel.app/ogimage.jpg",
+		images: "https://whx.world/ogimage.jpg",
 		title: siteConfig.title,
 		description: siteConfig.description,
 		site: siteConfig.url,
