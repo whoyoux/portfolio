@@ -55,7 +55,7 @@ const ProjectCard = ({
 	return (
 		<Card>
 			<CardHeader>
-				<Link href={slug} className="hover:underline">
+				<Link href={`/projects/${slug}`} className="hover:underline">
 					<CardTitle>{title}</CardTitle>
 				</Link>
 				{/* <CardDescription>{description}</CardDescription> */}

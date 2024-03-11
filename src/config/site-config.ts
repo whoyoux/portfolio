@@ -34,7 +34,7 @@ import { Technology } from "@/types/types.d";
 export const PROJECTS: ProjectCardProps[] = [
 	{
 		title: "ecommerce site",
-		slug: "/ecommerce",
+		slug: "ecommerce",
 		description: "technologies here",
 		image: ecommerce,
 		imageAlt: "screenshot of ecommerce site",
@@ -51,7 +51,7 @@ export const PROJECTS: ProjectCardProps[] = [
 	},
 	{
 		title: "social app",
-		slug: "/social-app",
+		slug: "social-app",
 		description: "technologies here",
 		image: socialapp,
 		imageAlt: "screenshot of social app",
@@ -67,7 +67,7 @@ export const PROJECTS: ProjectCardProps[] = [
 	},
 	{
 		title: "url shortener",
-		slug: "/url-shortener",
+		slug: "url-shortener",
 		description: "technologies here",
 		image: whxref,
 		imageAlt: "screenshot of whxref.pl",
@@ -84,7 +84,7 @@ export const PROJECTS: ProjectCardProps[] = [
 	},
 	{
 		title: "file converter",
-		slug: "/file-converter",
+		slug: "file-converter",
 		description: "technologies here",
 		image: fileconverter,
 		imageAlt: "screenshot of fileconverter",
