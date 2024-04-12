@@ -39,7 +39,7 @@ export const PROJECTS: ProjectCardProps[] = [
 		description: "technologies here",
 		image: aiwhxgen,
 		imageAlt: "screenshot of ecommerce site",
-		githubLink: "https://github.com/whoyoux/ecommerce",
+		githubLink: "https://github.com/whoyoux/ai-image-generator",
 		projectLink: "https://ai.whx.world",
 		technologyStack: [
 			Technology.TS,
