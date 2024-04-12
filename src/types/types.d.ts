@@ -10,4 +10,5 @@ export enum Technology {
 	TailwindCSS = "TailwindCSS",
 	Stripe = "Stripe",
 	FFmpeg = "FFmpeg",
+	UploadThing = "UploadThing",
 }

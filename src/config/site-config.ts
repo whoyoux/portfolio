@@ -25,6 +25,7 @@ export const siteConfig = {
 	creator: "whoyoux",
 };
 
+import aiwhxgen from "@/images/aiwhxgen.png";
 import ecommerce from "@/images/ecommerce.jpg";
 import fileconverter from "@/images/file-converter.jpg";
 import socialapp from "@/images/social-app.jpg";
@@ -32,6 +33,24 @@ import whxref from "@/images/whxref.jpg";
 import { Technology } from "@/types/types.d";
 
 export const PROJECTS: ProjectCardProps[] = [
+	{
+		title: "Ai whx Generator",
+		slug: "aiwhxgenerator",
+		description: "technologies here",
+		image: aiwhxgen,
+		imageAlt: "screenshot of ecommerce site",
+		githubLink: "https://github.com/whoyoux/ecommerce",
+		projectLink: "https://ai.whx.world",
+		technologyStack: [
+			Technology.TS,
+			Technology.NextJS,
+			Technology.PrismaORM,
+			Technology.TailwindCSS,
+			Technology.Stripe,
+			Technology.Postgres,
+			Technology.UploadThing,
+		],
+	},
 	{
 		title: "ecommerce site",
 		slug: "ecommerce",
