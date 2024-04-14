@@ -13,7 +13,8 @@ import Image, { StaticImageData } from "next/image";
 import { PROJECTS } from "@/config/site-config";
 import { cn } from "@/lib/utils";
 import { Technology } from "@/types/types";
-import Link from "next/link";
+// import Link from "next/link";
+import { Link } from "next-view-transitions";
 import TechnologyStack from "./technology-stack";
 
 const Projects = () => {

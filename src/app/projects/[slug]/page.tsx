@@ -3,8 +3,10 @@ import { PROJECTS } from "@/config/site-config";
 import { cn, getProjectNameFromGithubLink, getReadme } from "@/lib/utils";
 import { ChevronLeft } from "lucide-react";
 import { compileMDX } from "next-mdx-remote/rsc";
+// import Link from "next/link";
+import { Link } from "next-view-transitions";
 import { unstable_noStore } from "next/cache";
-import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import remarkGfm from "remark-gfm";
 
@@ -45,7 +47,7 @@ const ProjectPage = async ({ params }: { params: { slug: string } }) => {
 		},
 	});
 	return (
-		<div className="prose pt-4 dark:prose-invert w-full max-w-full">
+		<div className="prose pt-4 dark:prose-invert w-full max-w-full flex flex-col gap-4">
 			<div>
 				<Link
 					href="/"
@@ -56,6 +58,16 @@ const ProjectPage = async ({ params }: { params: { slug: string } }) => {
 				>
 					<ChevronLeft /> Go back
 				</Link>
+			</div>
+			<div className="w-full aspect-video relative mb-4">
+				<Image
+					src={project.image}
+					alt={project.imageAlt}
+					fill
+					sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+					className="rounded-lg border m-0"
+					placeholder="blur"
+				/>
 			</div>
 			{content}
 		</div>
