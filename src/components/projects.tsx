@@ -63,7 +63,12 @@ const ProjectCard = ({
 			</CardHeader>
 			<CardContent className="flex flex-col gap-4">
 				<TechnologyStack stack={technologyStack} />
-				<Image src={image} alt={imageAlt} className="rounded-md border" />
+				<Image
+					src={image}
+					alt={imageAlt}
+					className="rounded-md border"
+					style={{ viewTransitionName: `img-${slug}` }}
+				/>
 			</CardContent>
 			<CardFooter className="flex justify-end gap-2">
 				<Link

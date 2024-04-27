@@ -65,8 +65,10 @@ const ProjectPage = async ({ params }: { params: { slug: string } }) => {
 					alt={project.imageAlt}
 					fill
 					sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+					style={{ viewTransitionName: `main-${slug}` }}
 					className="rounded-lg border m-0"
 					placeholder="blur"
+					quality={100}
 				/>
 			</div>
 			{content}
