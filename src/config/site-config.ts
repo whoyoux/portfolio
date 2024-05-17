@@ -1,4 +1,4 @@
-import { ProjectCardProps } from "@/components/projects";
+import type { ProjectCardProps } from "@/components/projects";
 
 export const siteConfig = {
 	title: "whx",
