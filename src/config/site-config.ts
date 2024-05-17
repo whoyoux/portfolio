@@ -26,15 +26,32 @@ export const siteConfig = {
 };
 
 import aiwhxgen from "@/images/aiwhxgen.png";
+import blog from "@/images/blog.png";
 import ecommerce from "@/images/ecommerce.jpg";
 import fileconverter from "@/images/file-converter.jpg";
 import socialapp from "@/images/social-app.jpg";
 import whxref from "@/images/whxref.jpg";
+
 import { Technology } from "@/types/types.d";
 
 export const PROJECTS: ProjectCardProps[] = [
 	{
-		title: "Ai whx Generator",
+		title: "minimalist blog",
+		slug: "minimalist-blog",
+		description: "technologies here",
+		image: blog,
+		imageAlt: "screenshot of blog",
+		githubLink: "https://github.com/whoyoux/minimalist-blog",
+		projectLink: "https://whx-blog.vercel.app",
+		technologyStack: [
+			Technology.TS,
+			Technology.NextJS,
+			Technology.TailwindCSS,
+			Technology.MDX,
+		],
+	},
+	{
+		title: "ai whx Generator",
 		slug: "aiwhxgenerator",
 		description: "technologies here",
 		image: aiwhxgen,

@@ -11,4 +11,5 @@ export enum Technology {
 	Stripe = "Stripe",
 	FFmpeg = "FFmpeg",
 	UploadThing = "UploadThing",
+	MDX = "MDX",
 }
