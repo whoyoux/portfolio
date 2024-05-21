@@ -8,11 +8,11 @@ import {
 	CardTitle,
 } from "@/components/ui/card";
 import { Github, Link as LinkImage } from "lucide-react";
-import Image, { StaticImageData } from "next/image";
+import Image, { type StaticImageData } from "next/image";
 
 import { PROJECTS } from "@/config/site-config";
 import { cn } from "@/lib/utils";
-import { Technology } from "@/types/types";
+import type { Technology } from "@/types/types";
 // import Link from "next/link";
 import { Link } from "next-view-transitions";
 import TechnologyStack from "./technology-stack";
@@ -54,14 +54,14 @@ const ProjectCard = ({
 	projectLink,
 }: ProjectCardProps) => {
 	return (
-		<Card>
+		<Card className="flex flex-col">
 			<CardHeader>
 				<Link href={`/projects/${slug}`} className="hover:underline">
 					<CardTitle>{title}</CardTitle>
 				</Link>
 				{/* <CardDescription>{description}</CardDescription> */}
 			</CardHeader>
-			<CardContent className="flex flex-col gap-4">
+			<CardContent className="flex flex-col gap-4 flex-1">
 				<TechnologyStack stack={technologyStack} />
 				<Image
 					src={image}

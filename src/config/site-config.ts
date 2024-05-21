@@ -29,12 +29,30 @@ import aiwhxgen from "@/images/aiwhxgen.png";
 import blog from "@/images/blog.png";
 import ecommerce from "@/images/ecommerce.jpg";
 import fileconverter from "@/images/file-converter.jpg";
+import keyshop from "@/images/keyshop.png";
 import socialapp from "@/images/social-app.jpg";
 import whxref from "@/images/whxref.jpg";
 
 import { Technology } from "@/types/types.d";
 
 export const PROJECTS: ProjectCardProps[] = [
+	{
+		title: "key shop",
+		slug: "key-shop",
+		description: "technologies here",
+		image: keyshop,
+		imageAlt: "screenshot of key shop",
+		githubLink: "https://github.com/whoyoux/key-shop",
+		projectLink: "https://keyshop-whx.vercel.app",
+		technologyStack: [
+			Technology.TS,
+			Technology.NextJS,
+			Technology.TailwindCSS,
+			Technology.Stripe,
+			Technology.Postgres,
+			Technology.PrismaORM,
+		],
+	},
 	{
 		title: "minimalist blog",
 		slug: "minimalist-blog",
