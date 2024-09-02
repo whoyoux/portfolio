@@ -32,10 +32,31 @@ import fileconverter from "@/images/file-converter.jpg";
 import keyshop from "@/images/keyshop.png";
 import socialapp from "@/images/social-app.jpg";
 import whxref from "@/images/whxref.jpg";
+import plantcare from "@/images/plantcare.png";
 
 import { Technology } from "@/types/types.d";
 
 export const PROJECTS: ProjectCardProps[] = [
+	{
+		title: "PlantCare",
+		slug: "plantcare",
+		description: "technologies here",
+		image: plantcare,
+		imageAlt: "screenshot of plantcare website",
+		githubLink: "https://github.com/whoyoux/plant-care",
+		projectLink: "https://plant-care-whx.vercel.app/",
+		technologyStack: [
+			Technology.TS,
+			Technology.NextJS,
+			Technology.TailwindCSS,
+			Technology.Stripe,
+			Technology.Postgres,
+			Technology.PrismaORM,
+			Technology.UploadThing,
+			Technology.React,
+			Technology.OpenAI,
+		],
+	},
 	{
 		title: "key shop",
 		slug: "key-shop",
@@ -84,6 +105,7 @@ export const PROJECTS: ProjectCardProps[] = [
 			Technology.Stripe,
 			Technology.Postgres,
 			Technology.UploadThing,
+			Technology.OpenAI,
 		],
 	},
 	{

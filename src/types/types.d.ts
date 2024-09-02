@@ -12,4 +12,7 @@ export enum Technology {
 	FFmpeg = "FFmpeg",
 	UploadThing = "UploadThing",
 	MDX = "MDX",
+	OpenAI = "OpenAI",
+	NextAuth = "NextAuth",
+	LuciaAuth = "LuciaAuth",
 }
