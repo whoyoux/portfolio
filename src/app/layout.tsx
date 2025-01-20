@@ -9,6 +9,8 @@ import "./globals.css";
 
 import { ViewTransitions } from "next-view-transitions";
 
+import { Analytics } from "@vercel/analytics/react"
+
 const fontSans = FontSans({ subsets: ["latin"], variable: "--font-sans" });
 
 export const metadata: Metadata = {
@@ -68,6 +70,7 @@ export default function RootLayout({
 							{children}
 							<Footer />
 						</div>
+						<Analytics />
 					</ThemeProvider>
 				</body>
 			</html>
